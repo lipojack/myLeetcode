@@ -11,25 +11,25 @@
   @return {boolean}
 */
 
-var isomorphic = function(s, t){
+var isomorphic = function (s, t) {
   if (s.length != t.length) return false;
   var mapS = {};
   var mapT = {};
   var valueS = '';
   var valueT = '';
-  for (var i in s){
+  for (var i in s) {
     valueS = s[i];
     valueT = t[i];
-    
-    if (!mapS[valueS]){
+
+    if (!mapS[valueS]) {
       mapS[valueS] = valueT;
-    } else if (mapS[valueS] != mapT[valueT]){
+    } else if (mapS[valueS] != mapT[valueT]) {
       return false;
     }
 
-    if (!mapT[valueT]){
+    if (!mapT[valueT]) {
       mapT[valueT] = valueS;
-    } else if (mapT[valueS] != mapS[valueS]){
+    } else if (mapT[valueS] != mapS[valueS]) {
       return false;
     }
   }

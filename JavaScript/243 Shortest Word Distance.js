@@ -6,33 +6,33 @@
 // Given word1 = "makes", word2 = "coding", return 1.
 
 /*
-	@param {array} list
-	@param {string} a
-	@param {string} b
-	@return {number}
+  @param {array} list
+  @param {string} a
+  @param {string} b
+  @return {number}
 */
 
-let shortestDist = function(list, a, b){
-    let dist = Number.MAX_VALUE;
-    let i = 0;
-    let indexA = undefined,
-        indexB = undefined;
-    
-    while (i < list.length){
-        if (list[i] == a){
-            indexA = i;
-        }else if (list[i] == b) {
-            indexB = i;
-        }
+let shortestDist = function (list, a, b) {
+  let dist = Number.MAX_VALUE;
+  let i = 0;
+  let indexA = undefined,
+    indexB = undefined;
 
-        if(indexA != undefined && indexB != undefined){
-            dist = Math.min(dist, Math.abs(indexA-indexB));
-        }
-        i++;
+  while (i < list.length) {
+    if (list[i] == a) {
+      indexA = i;
+    } else if (list[i] == b) {
+      indexB = i;
     }
-    return dist;
+
+    if (indexA != undefined && indexB != undefined) {
+      dist = Math.min(dist, Math.abs(indexA - indexB));
+    }
+    i++;
+  }
+  return dist;
 }
 
-let l = ['a','b','c','d','e'];
+let l = ['a', 'b', 'c', 'd', 'e'];
 let x = 'a';
 let y = 'e';

@@ -11,12 +11,12 @@
   @return {boolean}
 */
 
-var validAnagram = function(s,t){
+var validAnagram = function (s, t) {
   if (s.length != t.length) return false;
   s = s.split('').sort().join('');
   t = t.split('').sort().join('');
-  return s==t;
+  return s == t;
 }
 
 
-console.log(validAnagram('123','122'));
+console.log(validAnagram('123', '122'));

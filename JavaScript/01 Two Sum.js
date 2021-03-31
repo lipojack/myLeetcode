@@ -8,14 +8,14 @@
   @return {number[]}
 */
 
-var twoSum = function(num, target){
-    var map = {};
-    for(var i=0; i<num.length; i++){
-        var v = num[i];
-        if((target-v) in map)
-            return [map[target-v], i];
-        else
-            map[v] = i;
-    }
-    return 0;
+var twoSum = function (num, target) {
+  var map = {};
+  for (var i = 0; i < num.length; i++) {
+    var v = num[i];
+    if ((target - v) in map)
+      return [map[target - v], i];
+    else
+      map[v] = i;
+  }
+  return 0;
 }

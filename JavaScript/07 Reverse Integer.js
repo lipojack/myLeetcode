@@ -11,29 +11,29 @@
   @return {number}
 */
 
-var reverse = function(x) {
-    var sign = 0;
-    var result = 0;
-    var t = 0;
-    if (x < 0){
-    	x = Math.abs(x);
-    	sign = 1;
-    }
-    
-    while (x) {
-        result = result * 10 + x % 10
-        // Use floor to get int result
-        x = Math.floor(x/10);
-    }
-    
-    if (sign) result = -result;
-    
-    isOverflow(result);
-    return result;
+var reverse = function (x) {
+  var sign = 0;
+  var result = 0;
+  var t = 0;
+  if (x < 0) {
+    x = Math.abs(x);
+    sign = 1;
+  }
+
+  while (x) {
+    result = result * 10 + x % 10
+    // Use floor to get int result
+    x = Math.floor(x / 10);
+  }
+
+  if (sign) result = -result;
+
+  isOverflow(result);
+  return result;
 }
 
 var isOverflow = function (x) {
-    var MAX = Math.pow(2,31)-1; 
-    var MIN = -(1+MAX);
-    if(x > MAX || x < MIN) return 0;
+  var MAX = Math.pow(2, 31) - 1;
+  var MIN = -(1 + MAX);
+  if (x > MAX || x < MIN) return 0;
 }

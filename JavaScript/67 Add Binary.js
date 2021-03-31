@@ -7,22 +7,22 @@
   @return {string}
 */
 
-var addBinary = function(a, b){
+var addBinary = function (a, b) {
   var result = [];
   var carry = 0;
   var lenA = a.length;
   var lenB = b.length;
   var iA = 0;
   var iB = 0;
-  
-  while (iA < lenA || iB < lenB){
-    var vA = iA < lenA ? parseInt(a[lenA - iA -1]) : 0;
-    var vB = iB < lenB ? parseInt(b[lenB - iB -1]) : 0;
+
+  while (iA < lenA || iB < lenB) {
+    var vA = iA < lenA ? parseInt(a[lenA - iA - 1]) : 0;
+    var vB = iB < lenB ? parseInt(b[lenB - iB - 1]) : 0;
     var value = carry + vA + vB;
     carry = value > 1 ? 1 : 0;
     var fixed = value % 2;
-    iA ++;
-    iB ++;
+    iA++;
+    iB++;
     result = fixed + result;
   }
 

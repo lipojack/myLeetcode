@@ -11,21 +11,21 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 
-var rotate = function(num, k){
-    var tmp = [];
-    var len = num.length;
-    var step = k % len;
+var rotate = function (num, k) {
+  var tmp = [];
+  var len = num.length;
+  var step = k % len;
 
-    for (var i = step; i > 0; i--){
-        tmp.push(num[num.length-i]);
-    }
-    
-    for (var j = len - 1; j >= 0 ; j--){
-        if(j >= step)
-            num[j] = num[j-step];
-        else
-            num[j] = tmp[j];
-    }
+  for (var i = step; i > 0; i--) {
+    tmp.push(num[num.length - i]);
+  }
+
+  for (var j = len - 1; j >= 0; j--) {
+    if (j >= step)
+      num[j] = num[j - step];
+    else
+      num[j] = tmp[j];
+  }
 }
 
 //rotate([1,2,3,4,5,6,7], 3);

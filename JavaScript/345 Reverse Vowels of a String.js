@@ -9,23 +9,23 @@
 */
 
 
-var reverseVowel = function(s){
+var reverseVowel = function (s) {
   var arr = s.split('');
   var len = s.length;
   var vowels = [];
-  for (var i = 0; i < len; i++){
+  for (var i = 0; i < len; i++) {
     if (isVowel(arr[i])) vowels.push(arr[i]);
   }
-  
-  //last index of vowels
-  var v = vowels.length-1;
 
-  for (var j = 0; j < len; j++){
+  //last index of vowels
+  var v = vowels.length - 1;
+
+  for (var j = 0; j < len; j++) {
     if (isVowel(arr[j])) arr[j] = vowels[v--];
   }
   return arr;
 }
 
-var isVowel = function(a){
+var isVowel = function (a) {
   return (/^[aeiou]$/i).test(a);
 }

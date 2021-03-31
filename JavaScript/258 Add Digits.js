@@ -9,10 +9,10 @@
   @return {number} sum
 */
 
-var addDigit1 = function(num){
+var addDigit1 = function (num) {
   var sum = 0;
-  while (num >= 10){
-    (''+num).split('').forEach(function(d){
+  while (num >= 10) {
+    ('' + num).split('').forEach(function (d) {
       sum += parseInt(d);
     });
     return sum;
@@ -21,7 +21,7 @@ var addDigit1 = function(num){
 
 
 // Use the rule of 9' multiples
-var addDigit2 = function(num){
+var addDigit2 = function (num) {
   if (num == 0) return 0;
   if (num % 9 == 0) return 9;
   return num % 9;

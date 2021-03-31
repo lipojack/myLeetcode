@@ -13,21 +13,21 @@
 */
 
 // Adjusted from 205 Isomorphic String
-var wordPattern = function(pattern, word){
+var wordPattern = function (pattern, word) {
   var p = pattern.split('');
   var w = word.split(' ');
-  var mapP ={};
+  var mapP = {};
   var mapW = {};
   var valueP;
   var valueW;
-  for (var i in p){
-  	valueP = p[i];
-  	valueW = w[i];
-    
-    if(!mapP[valueP]) mapP[valueP] = valueW;
+  for (var i in p) {
+    valueP = p[i];
+    valueW = w[i];
+
+    if (!mapP[valueP]) mapP[valueP] = valueW;
     else if (mapP[valueP] != valueW) return false;
-    
-    if(!mapW[valueW]) mapW[valueW] = valueP;
+
+    if (!mapW[valueW]) mapW[valueW] = valueP;
     else if (mapW[valueW] != valueP) return false
   }
   return true;

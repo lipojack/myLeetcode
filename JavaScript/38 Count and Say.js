@@ -7,17 +7,17 @@
   @return {string}
 */
 
-var countNSay = function(num){
+var countNSay = function (num) {
   var count = 1;
   var result = '';
-  var numArr = (''+num).split('');
+  var numArr = ('' + num).split('');
   //console.log('qq');
-  for(var i = 0; i < numArr.length; i++){
+  for (var i = 0; i < numArr.length; i++) {
     //console.log(numArr[i]);
-    if(numArr[i+1] == numArr[i]){
+    if (numArr[i + 1] == numArr[i]) {
       count++;
-    }else{
-      result = result + '' + count + '' +numArr[i];
+    } else {
+      result = result + '' + count + '' + numArr[i];
       count = 1;
     }
   }

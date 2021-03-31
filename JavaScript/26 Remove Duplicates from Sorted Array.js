@@ -8,19 +8,19 @@
   @return {number}
 */
 
-var removeDuplicate = function(num){
+var removeDuplicate = function (num) {
   if (num == null || num.length == 0) return 0;
   if (num.length == 1) return 1;
   var count = 0;
-  for (var i = 1; i < num.length; i++){
-    if (num[i] != num[count]){
+  for (var i = 1; i < num.length; i++) {
+    if (num[i] != num[count]) {
       count++;
       num[count] = num[i];
-    } 
+    }
   }
   return ++count;
 }
 
 
 
-console.log(removeDuplicate([1,1,2,3,4,5,6,7,7,8,8]))
+console.log(removeDuplicate([1, 1, 2, 3, 4, 5, 6, 7, 7, 8, 8]))

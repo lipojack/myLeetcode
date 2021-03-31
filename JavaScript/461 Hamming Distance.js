@@ -27,16 +27,16 @@
   @return {number}
 */
 
-var hammingDist = function(a, b){
-    var result = 0;
-    var c = a^b;
-    // Count 1
-    while (c){
-        if (c % 2 ){
-            result += 1;
-        }
-        c >>= 1;
+var hammingDist = function (a, b) {
+  var result = 0;
+  var c = a ^ b;
+  // Count 1
+  while (c) {
+    if (c % 2) {
+      result += 1;
     }
-    return result;
+    c >>= 1;
+  }
+  return result;
 }
 

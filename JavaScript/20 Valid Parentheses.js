@@ -6,22 +6,22 @@
   @return {boolean}
 */
 
-var validParen = function(paren){
+var validParen = function (paren) {
   if (!paren.length) return false;
   if (!paren.length % 2) return false;
-  
+
   var stack = [];
   var pMap = {
-    '(' : ')',
-    '[' : ']',
-    '{' : '}',
+    '(': ')',
+    '[': ']',
+    '{': '}',
   };
-  
-  for (var i in paren){
-    if (paren[i] == '(' || paren[i] == '[' || paren[i] == '{'){
+
+  for (var i in paren) {
+    if (paren[i] == '(' || paren[i] == '[' || paren[i] == '{') {
       stack.push(paren[i]);
       //console.log(stack);
-    } else if (paren[i] != pMap[stack.pop()]){
+    } else if (paren[i] != pMap[stack.pop()]) {
       return false;
     }
   }
